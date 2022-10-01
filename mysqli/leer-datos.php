@@ -1,11 +1,21 @@
 <?php
 
-$conexion = new mysqli('localhost', 'root', 'y', 'prueba_datos');
+$conexion = new mysqli('localhost', 'root', '', 'prueba_datos');
 
 if ($conexion->connect_errno !== 0) {
-  die('Lo siento. Hubo un problema con el servidor');
+  die('Lo siento. Hubo u$resultado->num_rows');
 } else {
-  $sql = 'SELLECT * FROM usuarios'
+  $sql = 'SELECT * FROM usuarios';
+  $resultados = $conexion->query($sql);
+
+  if ($resultados->num_rows) {
+    //echo $resultados->num_columns;
+    var_dump($resultados->fetch_assoc());
+    var_dump($resultados->fetch_assoc());
+
+  }else {
+    echo 'no hay datos';
+  }
 }
 
 //print_r($conexion);
