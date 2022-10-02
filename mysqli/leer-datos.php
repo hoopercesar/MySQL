@@ -10,8 +10,12 @@ if ($conexion->connect_errno !== 0) {
 
   if ($resultados->num_rows) {
     //echo $resultados->num_columns;
-    var_dump($resultados->fetch_assoc());
-    var_dump($resultados->fetch_assoc());
+    //var_dump($resultados->fetch_assoc());
+    //var_dump($resultados->fetch_assoc());
+
+    while($fila = $resultados->fetch_assoc()) {
+      echo $fila['nombre'];
+    }
 
   }else {
     echo 'no hay datos';
