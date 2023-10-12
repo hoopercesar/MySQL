@@ -1,0 +1,16 @@
+# seleccionar la base de datos
+USE base_peliculas;
+
+INSERT INTO actores  (id_actor, nombre, nacionalidad, nombre_personaje) VALUES
+('02', 'juan', 'brasileño', 'joao'),
+('03', 'andré', 'brasileiro', 'sergio'),
+('04', 'maria', 'chilena', 'peta'),
+('05', 'roxana', 'chilena', 'juanucha')
+;
+
+INSERT INTO peliculas (titulo, anho, id_pelicula, nacionalidad, idioma, formato, descripcion, resumen, observaciones) VALUES
+('agente 34', '1990-11-20', '01', 'usa', 'ingles', 'color', 'larga duracion', 'asesino busca el perdon de sus victimas', 'nada'),
+('breve', '2000-01-10', '02', 'peru', 'español', 'blanco y negro', 'cortometraje', 'animación infantil', 'niños 2 a 3'),
+('secuestro de muertos', '2005-05-10', '03', 'usa', 'ingles', 'color', 'larga duracion', 'secuestran muertos y piden rescate', 'acción') 
+;
+
